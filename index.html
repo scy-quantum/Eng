@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Hypnosis | Online One-on-One Healing Session</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f7f7f7;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 26px;
+            border-bottom: 2px solid #667;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin: 40px 0 15px 0;
+            font-size: 20px;
+            background: #eef2f5;
+            padding: 8px 12px;
+            border-left: 4px solid #3498db;
+        }
+        
+        p {
+            margin: 15px 0;
+            font-size: 16px;
+            word-break: break-word;
+        }
+        
+        ul {
+            margin: 15px 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .case {
+            background: #fff;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        
+        .warn {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #27ae60;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .img-box {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .img-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            display: block;
+        }
+        
+        .divider {
+            border-top: 1px dashed #ccc;
+            margin: 30px 0;
+        }
+        
+        /* Flexible image container for side-by-side layouts */
+        .flex-images {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .flex-images img {
+            flex: 1;
+            min-width: 280px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Links styling */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            word-break: break-word;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== TABLET BREAKPOINT (768px and below) ===== */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+                font-size: 15px;
+            }
+            
+            h1 {
+                font-size: 22px;
+                margin: 20px 0;
+            }
+            
+            h2 {
+                font-size: 18px;
+                margin: 30px 0 12px 0;
+                padding: 6px 10px;
+            }
+            
+            p {
+                font-size: 15px;
+                margin: 12px 0;
+            }
+            
+            ul {
+                margin: 12px 20px;
+            }
+            
+            li {
+                margin: 6px 0;
+                font-size: 15px;
+            }
+            
+            .case {
+                padding: 12px;
+                margin: 10px 0;
+            }
+            
+            .quote {
+                font-size: 16px;
+                margin: 15px 0;
+            }
+            
+            .img-box {
+                margin: 20px 0;
+            }
+            
+            .divider {
+                margin: 20px 0;
+            }
+            
+            /* Stack flex layouts vertically */
+            .flex-images {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .flex-images img {
+                min-width: 100%;
+            }
+        }
+        
+        /* ===== MOBILE BREAKPOINT (480px and below) ===== */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 20px;
+                margin: 15px 0;
+                padding-bottom: 8px;
+            }
+            
+            h2 {
+                font-size: 16px;
+                margin: 20px 0 10px 0;
+                padding: 5px 8px;
+            }
+            
+            p {
+                font-size: 14px;
+                margin: 10px 0;
+                line-height: 1.6;
+            }
+            
+            ul {
+                margin: 10px 15px;
+                padding-left: 20px;
+            }
+            
+            li {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+            
+            .case {
+                padding: 10px;
+                margin: 8px 0;
+                border-radius: 6px;
+            }
+            
+            .quote {
+                font-size: 15px;
+                margin: 12px 0;
+            }
+            
+            .img-box {
+                margin: 15px 0;
+            }
+            
+            .divider {
+                margin: 15px 0;
+            }
+            
+            .flex-images {
+                gap: 15px;
+            }
+            
+            /* Inline styles override for mobile */
+            .img-box[style*="text-align: left"] {
+                text-align: center !important;
+            }
+        }
+        
+        /* ===== LARGE DESKTOP (1200px and above) ===== */
+        @media (min-width: 1200px) {
+            body {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quantum Hypnosis | Online 1-on-1 Healing Session</h1>
+
+<p>Sink into deep relaxation and tap into your deeper subconscious.</p>
+
+<p>Session held via Zoom; no commute required.<br>
+A private and relaxing mind-body-spirit healing experience from the comfort of your own home.</p>
+
+<ul>
+    <li>Emotional Release and Stress Reduction</li>
+    <li>Past-life regression and Cosmic Insights</li>
+    <li>Talk to Your Cells and Awaken Inner Balance</li>
+    <li>Discover Life Purpose</li>
+</ul>
+
+<div class="img-box">
+    <img src="images/01earphone.jpg" alt="Earphone image 1">
+</div>
+
+<div class="divider"></div>
+
+<p>Under deep hypnosis and profound relaxation, your voice may become extremely soft.<br>
+<b style="color:red;">Please keep the microphone close to your mouth at all times.</b>
+</p>
+<p>Ensure your full face and both hands are clearly visible on camera.</p>
+
+<div class="img-box">
+    <img src="images/03earphone.jpg" alt="Earphone image 3">
+</div>
+
+<div class="divider"></div>
+
+<p>In daily life, the left brain governs rational logic and critical judgment, often shifting with emotional fluctuations.<br>
+Meanwhile, the intuition of the right brain is constantly suppressed by the left brain.</p>
+
+<p>Over time, you gradually tune out the voice of your right brain — the subconscious —, <br>and lose connection with your genuine inner awareness.</p>
+
+<p>Hypnosis is designed to gently quiet the left brain, ease excessive analytical defenses<br>
+and allow the wisdom of the suppressed right brain to surface naturally.<br>
+This helps you reconnect with your inner power and rediscover your multidimensional true self.</p>
+
+<div class="img-box">
+    <img src="images/04brains.jpg" alt="Left and right brain image">
+</div>
+
+<div class="divider"></div>
+
+<p class="quote" style="text-align: left;">Nikola Tesla said: Everything in the universe is energy, frequency, and vibration.</p>
+
+<div class="img-box">
+    <img src="images/05NikolaTesla.jpg" alt="Nikola Tesla">
+</div>
+
+<div class="divider"></div>
+
+<p>Brainwaves and intentions are energetic frequencies.
+<br>
+Your subconscious thoughts are heard and faithfully mirrored by every cell in your body.</p>
+
+<div class="flex-images">
+  <img src="images/06waves.gif" alt="Energy waves">
+  <img src="images/07bodyUniverse.jpg" alt="Body as universe">
+</div>
+
+<div class="divider"></div>
+
+<p>When a child refuses to go to school and tells their mother they have a fever, their body temperature will actually rise.<br>
+When a doctor prescribes vitamins that you believe are effective medicine, you truly recover.</p>
+
+<p>Your entire body is a universe, and you are the god of this universe.<br>
+Every cell in your body deeply loves you and unconditionally obeys your every command.</p>
+
+<div class="flex-images">
+  <img src="images/08fever.jpg" alt="Fever">
+  <img src="images/09placebo.jpg" alt="Placebo effect">
+</div>
+
+<div class="divider"></div>
+
+<p>A woman had grown distant from her husband. <br>
+After being diagnosed with cancer, she discovered a profound truth during psychological counseling: <br>
+her subconscious did not truly want her illness to vanish.</p>
+
+<p>Only when she was ill would her husband set aside their differences, accompany her to medical appointments, and speak with her.<br>
+This long-missed interaction became the comfort her subconscious clung to.</p>
+
+<div class="img-box">
+    <img src="images/10constellation.png" alt="Constellation">
+</div>
+
+<p>Yet this "subconscious" desire completely contradicted her "conscious" mind.<br>
+When this truth emerged, her conscious mind instantly fell apart.<br>
+She ranted furiously: "Are you out of your mind?! Who would NOT want to recover?!!!!!"</p>
+
+<p><strong>Ready to dive into your subconscious?</strong></p>
+
+<div class="divider"></div>
+
+<h2>My Services · One-shot Deep Mind-Body-Spirit Healing, No Multiple Sessions required</h2>
+<ul>
+    <li>1-2 hour deep online consultation: Understanding your intended goals, emotional blocks, and questions you wish to resolve.</li>
+
+    <li>1-2 hour guided hypnosis: Entering a subconscious state, awakening inner wisdom, and exploring root causes and answers.</li>
+
+    <li>Summary: Integrating insights and aligning you with your true path.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>Who Is This For? · First, Test Your Imagery Response</h2>
+
+<p>Look closely at the image below.<br>
+Immerse yourself in this old house and stay with it for a moment.</p>
+
+<p>Notice the emotions that arise within you,<br>
+and try to describe your intuitive impressions and observations.</p>
+
+<p>Take note of this feeling and your intuitive impressions. <br>
+Then scroll down to see which of the 3 case examples below best describes you.
+</p>
+
+<p>
+(source: <a href= "https://candacecrawgoldman.com/feeding-your-imaginative-self/" target="_blank">Candace Craw-Goldman website</a>)
+</p>
+
+<div class="img-box">
+    <img src="images/11old_house.jpg" alt="Old house hypnosis test image">
+</div>
+
+<div class="case">
+    <p><b style="color:blue;">Client 1:</b></p>
+    <p>I see an old house.<br>
+    There is a stove, pieces of furniture, and tableware on the table.</p>
+
+    <p><em>Hypnotist: Is that all?</em></p>
+
+    <p>Client 1: Hmm~~ There's also an overturned chair on the floor.<br>
+    I think that's about all.<br>
+    Oh! Wait, there's a water wheel outside the door.</p>
+</div>
+
+<div class="case">
+    <p><b style="color:blue;">Client 2:</b></p>
+    <p>I'm standing in an old house.<br>
+    The floor seems to be made of stone, wooden beams on the ceiling, and some ornaments on the walls.<br>
+
+The room is simply furnished, and there're tableware and a cup on the table.<br>
+    Someone is preparing dinner. I think it's beef stew.<br>
+ 
+    An overturned chair lies on the floor, as if someone rushed out in a hurry and knocked it over.<br>
+
+    A wooden water wheel stands outside the door.</p>
+
+    <p><em>Hypnotist: Do you notice anything else? Can you describe more?</em></p>
+
+    <p>Client 2: It's dusk now.<br> 
+Even with a fire burning, the room still feels a bit cold.<br>
+    There’s no one here but me, and I feel rather lonely</p>
+</div>
+
+<div class="case">
+    <p><b style="color:blue;">Client 3:</b></p>
+    <p>I'm in my grandfather's old country house.<br>
+    It’s autumn now. I’ve only just arrived.<br>
+
+A vegetable and potato stew is simmering over the fire, and it smells so good.<br>
+We’re just about to set the table for dinner when we hear a cow cry out in pain.<br>
+
+Grandfather hurries to check on it. He knocks over the chair in his rush.</p>
+
+    <p><em>Hypnotist: Where is the cow?</em></p>
+
+    <p>Client 3: Oh, it's in a small shed beside the house.<br>
+    It looks like it's about to give birth. <br>
+    I actually remember that cow — its name was Daisy.<br>
+It's so good to be back in the countryside.<br>
+    I really miss country life, and I miss my grandfather most of all.</p>
+
+    <p><strong>Client 3 might also say:</strong></p>
+    <ul>
+        <li>Little elves came in to make clothes and shoes</li>
+        <li>I'm an old woman living here all by myself</li>
+        <li>This house belongs to a giant</li>
+        <li>It's a set from a movie</li>
+    </ul>
+</div>
+
+<div class="divider"></div>
+
+<ul style="list-style-type: none;">
+
+<li><span style="color:blue">✔</span> If you relate to Client 3, you are highly suited for hypnosis.</li>
+
+<li><span style="color:blue">✔</span> If you’re more like Client 2, you can still enter the state as long as you relax and allow your left-brain conscious mind to quiet down.</li>
+
+<li><span style="color:blue">✔</span> Client 1 types may find it harder to enter the θ brainwave state needed for hypnosis. Regular meditation will help with this.</li>
+
+</ul>
+
+<div class="divider"></div>
+
+
+
+<h2>We Are a Team · Your Full Commitment is Essential</h2>
+ 
+<p>Take the analogy of a fitness trainer and client:<br>
+you must be willing to follow instructions and put in the effort.</p> 
+
+<p>If the trainer asks for 10 push-ups, you need to commit fully and follow through.<br>
+Without your willingness to act, even the most skilled trainer cannot help you reach your goals.</p>
+
+<div class="img-box">
+    <img src="images/12trainer.jpg" alt="Fitness trainer">
+</div>
+
+<p>Similarly, it is crucial that you follow my instructions throughout the hypnosis induction and stay fully immersed.</p>
+
+<div class="divider"></div>
+
+<p>Try not to hold excessive expectations, like a child leaning over a wall, eagerly waiting for something exciting to happen.<br>
+Otherwise, your left brain will stay constantly aroused, making it very difficult for you to settle in and truly relax.</p>
+
+
+<div class="img-box">
+    <img src="images/13expecting.jpg" alt="Expectation">
+</div>
+
+<div class="divider"></div>
+
+<h2>About Me · Hypnotherapist</h2>
+<ul>
+    <li>BQH (Beyond Quantum Healing): Quantum Healing through Online Hypnosis (<a href="https://quantumhealers.com/practitioner/quantum-healer-in-china/" target="_blank">BQH website</a>)</li>
+
+    <li>Mike Mandel Hypnosis Academy: Trained in NLP techniques</li>
+</ul>
+
+<div class="divider"></div>
+
+
+<h2>Payment · Full Advance Payment USD 319</h2>
+<p>Paypal, Wise, wechat</p>
+<p>After payment, you can book your specific appointment date</p>
+
+<div class="divider"></div>
+
+<h2>Your Pre-Session Preparation</h2>
+
+<p><strong>Make a list:</strong> Take time to reflect on everything in life you wish to find answers to. Write them down, and we will review this list together during your consultation.</p>
+<ul>
+    <li>Family of origin</li>
+    <li>Love and relationships</li>
+    <li>Career and work</li>
+    <li>Religion and life purpose</li>
+    <li>Supernatural and unexplained phenomena</li>
+</ul>
+
+<p><strong>Setting:</strong></p>
+<ul>
+    <li>Find a quiet space where you will not be disturbed for 4+ consecutive hours</li>
+    <li>Wear loose, comfortable clothing; no makeup</li>
+    <li>Do not overeat beforehand; avoid strenuous exercise</li>
+    <li>If possible, avoid coffee, tea, and medications on the day</li>
+    <li>Test your headphones and microphone — the microphone should be placed close to your mouth</li>
+    <li>Have blank paper and a pen ready</li>
+</ul>
+
+
+<div class="divider"></div>
+
+<h2>Contact Me · Book Your Personal Healing Session</h2>
+<p>Email: <a href="mailto:scy_quantum@outlook.com">scy_quantum@outlook.com</a></p>
+
+</body>
+</html>
