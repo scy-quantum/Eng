@@ -298,23 +298,30 @@
   border-radius: 8px; /* 可选：圆角 */
 }
 
+    /* 文字样式：靠左对齐！关键！ */
+.text {
+  text-align: left !important; /* 强制文字永远靠左 */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 悬挂缩进：让第二行自动对齐 */
+.indent-p {
+  padding-left: 1.8em;
+  text-indent: -1.8em;
+  margin: 1em 0;
+  text-align: left !important; /* 手机也不会居中 */
+}
+    
 /* 手机：自动变成上下排列 */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start; /* 重点：全部靠左，不居中 */
   }
 }
-</style>
 
-<style>
-.indent-p {
-  padding-left: 1.8em;    /* 整体往右挪出位置 */
-  text-indent: -1.2em;    /* 第一行往左拉回去 */
-  margin: 1em 0;
-}
 </style>
-
 
     
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
