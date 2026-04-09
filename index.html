@@ -276,6 +276,74 @@
         }
     </style>
 
+
+    
+<!-- 让手机正确显示 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图文并排</title>
+<style>
+/* 电脑：图和文字并排 */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* 图片宽度 */
+.container img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px; /* 可选：圆角 */
+}
+
+/* 手机：自动变成上下排列 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<style>
+.indent-p {
+  padding-left: 1.8em;    /* 整体往右挪出位置 */
+  text-indent: -1.2em;    /* 第一行往左拉回去 */
+  margin: 1em 0;
+}
+</style>
+
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>手机视频播放</title>
+  <style>
+    /* 全局重置，避免样式冲突导致视频隐藏 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 10px; /* 给视频留边，避免贴边被遮挡 */
+    }
+    /* 强制视频容器显示，优先级最高 */
+    #chromium-video {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: 100% !important;
+      min-height: 200px !important; /* 强制最小高度，避免空白 */
+      height: auto !important;
+      z-index: 9999 !important;
+      pointer-events: auto !important;
+      background: #000; /* 黑色背景，能看到播放器边界 */
+      border: 1px solid #ccc; /* 加边框，确认视频区域 */
+    }
+  </style>
+
     
 </head>
 <body>
@@ -390,18 +458,31 @@ She ranted furiously: "<strong>Are you out of your mind?! Who would NOT want to 
 
 <div class="divider"></div>
 
+    
 <h2>My Services · One-shot Holistic Healing, No Multiple Sessions required</h2>
-<ul>
-    <li>1-2 hours Online face-to-face consultation via Computer/Laptop:<br>
-        Understanding your intended goals, emotional blocks, and questions you wish to resolve.</li>
+    
+<div class="container">
+  <!-- 左边图片 -->
+  <img src="images/14face2face.jpg" alt="Zoom_face2face">
 
-    <li>1-2 hours Guided Hypnosis:<br>
-        Entering a subconscious state, awakening inner wisdom, and exploring root causes and answers.</li>
+  <!-- 右边3行文字 -->
+  <div class="text">
+    <p class="indent-p">1-2 hours Online face-to-face consultation via Computer/Laptop:<br>
+        Understanding your intended goals, emotional blocks, and questions you wish to resolve.</p>
 
-    <li>Review & Summary:<br>
-        Integrating insights to empower you on your true path.</li>
-</ul>
+    <p class="indent-p">1-2 hours Guided Hypnosis:<br>
+        Entering a subconscious state, awakening inner wisdom, and exploring root causes and answers.</p>
 
+    <p class="indent-p">Review & Summary:<br>
+        Integrating insights to empower you on your true path.</p>
+
+  </div>
+</div>
+
+
+
+
+    
 <div class="divider"></div>
 
 <h2>Who Is This For? · First, Test Your Imagery Response</h2>
