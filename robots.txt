@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scy-quantum.github.io/Eng/sitemap.xml
