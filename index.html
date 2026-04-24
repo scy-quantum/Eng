@@ -285,6 +285,45 @@
                 font-size: 24px;
             }
         }
+
+		
+/* 两张图并排容器 */
+.img-row {
+  display: flex;
+  gap: 30px; /* 两张图间距 */
+  align-items: stretch; /* 子元素上下拉伸铺满高度 */
+}
+
+/* 左侧图：等比、上下完全贴齐右图 */
+.img-left {
+  width: 280px;   /* 左侧你要的宽度，自己改 */
+  height: 100%;   /* 高度强制继承右图高度 */
+  object-fit: contain; /* 核心：等比缩放、绝不压扁变形 */
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+   /* 右侧图：固定尺寸、作为高度基准 */
+.img-right {
+  width: 380px;   /* 右图固定宽 */
+  height: auto;   /* 右图自身正常等比，决定整体高度 */
+  border-radius: 8px;
+}
+/* ====================== */
+/* 手机端：自动变上下排列 */
+/* ====================== */
+@media (max-width: 768px) {
+  .img-row {
+    flex-direction: column; /* 关键：变垂直 */
+  }
+
+  .img-left,
+  .img-right {
+    width: 100%; /* 手机端图全屏 */
+    height: auto; /* 手机端恢复正常比例 */
+  }
+}
+	
     </style>
 
     <style>
@@ -455,9 +494,9 @@ reconnecting you with your <strong>inner power</strong> and your <strong>multidi
 <p>When a child claims to have a fever in order to avoid school, their body temperature will indeed rise.<br>
   When a doctor prescribes vitamins you believe to be powerful medicine, you truly recover.</p>
 
-<div class="flex-images">
-  <img src="images/08fever.jpg" alt="Fever" style="width: 100%;  max-width: 100%;  height: auto;" loading="lazy">
-  <img src="images/09placebo.jpg" alt="Placebo effect"  style="width: 100%;   max-width: 100%;   height: auto;" loading="lazy">
+<div class="img-row">
+  <img class="img-left" src="images/08fever.jpg" alt="Fever" loading="lazy">
+  <img class="img-right" src="images/09placebo.jpg" alt="Placebo effect" loading="lazy">  
 </div>
 
 <p>Your entire body is a universe, and you are the god of this universe.<br>
