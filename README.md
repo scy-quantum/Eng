@@ -1,5 +1,4 @@
-# Quantum Healing Hypnosis | Subconscious Mind Deep Healing
-Specializes in **QHHT, BQH Beyond Quantum Healing, subconscious regression, and stress release**.
+# Quantum Healing Hypnosis
 Based on **Dolores Cannon QHHT** and **BQH Beyond Quantum Healing** systems, combined with NLP (Neuro-Linguistic Programming)
 
 
