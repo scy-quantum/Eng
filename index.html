@@ -192,45 +192,68 @@
 /* 双图并排 */
 .img-row {
     display: flex;
-    gap: 60px; /* 图片之间的间距，可保留/微调 */
+    gap: 60px; 
     align-items: flex-start;
     margin-bottom: 20px;
 }
 
-/* 左文字容器 - 宽度和左图一致 */
 .img-text-wrapper {
-    width: 330px; /* 原280px → 改为350px（更宽），可自行调400/450px */
+    width: 330px; 
     box-sizing: border-box;
 }
-/* 右文字容器 - 宽度和右图一致 */
 .img-text-wrapper-right {
-    width: 430px; /* 原360px → 改为450px（更宽），可自行调500/550px */
+    width: 430px; 
     box-sizing: border-box;
 }
 
-/* 左图样式 - 加宽 */
 .img-left {
-    width: 310px; /* 核心：左图宽度和文字容器一致 */
-    height: auto; /* 高度自动，保持图片比例不变形 */
+    width: 310px; 
+    height: auto;
     object-fit: contain;
     flex-shrink: 0;
     border-radius: 8px;
     border: 1.3px solid #000;
 }
 
-/* 右图样式 - 加宽 */
 .img-right {
-    width: 400px; /* 核心：右图宽度和文字容器一致 */
+    width: 400px; 
     height: auto;
     border-radius: 8px;
     border: 1.3px solid #000;
 }
 
-.img-caption {
-    margin-bottom: 20px;
-    line-height: 1.5;
-    text-align: left;
-    word-wrap: break-word;
+/* 手機版：完全獨立樣式，不重覆 */
+@media (max-width: 768px) {
+    .img-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .img-text-wrapper,
+    .img-text-wrapper-right {
+        width: 100% !important;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    /* 加一層更保險，不影響電腦版 */
+    .img-text-wrapper-right .img-right,
+    .img-text-wrapper .img-left,
+    .img-left,
+    .img-right {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-row {
+        gap: 15px;
+    }
+    .img-caption {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }
 
 
